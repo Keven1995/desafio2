@@ -61,7 +61,6 @@ systemctl reload firewalld
 
 # Atualizar /etc/hosts para adicionar ambos os endereços IP para o mesmo domínio
 echo "Atualizando /etc/hosts..."
-sed -i "/www.${hostname}.com/d" /etc/hosts
 echo "$IP_ADDRESS www.${hostname}.com" >> /etc/hosts
 
 # Reiniciar httpd
