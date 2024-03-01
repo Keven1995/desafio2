@@ -27,7 +27,7 @@ fi
 hostname=$(cat /etc/hostname)
 
 # Obter o endereço IP
-IP_ADDRESS=$(ip route get 1 | awk '{print $NF;exit}')
+IP_ADDRESS=$(hostname -I | awk '{print $1}')
 
 # Criar diretório para as páginas html/php
 echo "Criando diretório /var/www/html/${hostname}.com..."
